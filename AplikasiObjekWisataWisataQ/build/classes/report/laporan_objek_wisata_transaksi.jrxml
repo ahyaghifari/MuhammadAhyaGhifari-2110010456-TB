@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Laporan Objek Wisata Transaksi" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bbc1f040-66b4-464f-8f1c-85d4a8aed108">
+	<property name="ireport.zoom" value="1.2100000000000029"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="PARAMETER_BULAN_TAHUN" class="java.lang.String"/>
+	<parameter name="PARAMETER_NAMA_MANAJER" class="java.lang.String"/>
+	<field name="idObjekWisata" class="java.lang.String"/>
+	<field name="namaObjekWisata" class="java.lang.String"/>
+	<field name="jmlTransaksi" class="java.lang.String"/>
+	<field name="lokasi" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="33" uuid="fa22c2a3-4691-49da-a622-7ec7a00e3bf1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WisataQ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="33" width="544" height="27" uuid="75b5946e-14c9-49a3-94f0-2f688ca618b8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Karang Anyar 1 No. 25, Banjarbaru Utara, Banjarbaru, Kalimantan Selatan
+Telepon : 089541350536 Email : wisata@gmail.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="64" width="555" height="1" uuid="6c63e5e2-57f6-4723-857e-93153bd0667b"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="555" height="27" uuid="fd68c251-349b-4ce0-b497-8f9440ad0347"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="66" width="555" height="20" uuid="d434401c-8105-4fac-b0fa-b988dd018497"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAMETER_BULAN_TAHUN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="47" width="555" height="19" uuid="21ab001e-dbe4-49ae-b1dc-13273e875c76"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRANSAKSI OBJEK WISATA]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="434" y="0" width="121" height="20" uuid="a7c2123d-b635-45d7-8252-bd4fa259e2b5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="93" height="20" uuid="64c40688-c827-4503-b7c4-e4d9c4883948"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="93" y="0" width="161" height="20" uuid="b2547819-d303-4040-ae74-3404103437bf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="254" y="0" width="138" height="20" uuid="417f846c-0a4a-4190-b9c0-28c29dadc826"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="392" y="0" width="163" height="20" uuid="a6a5dd31-2250-4e17-87f4-c3d5d9fd3c44"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="93" height="20" uuid="85cd4d05-e000-4d5f-8214-259b5e7fa414"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="0" width="161" height="20" uuid="d7b0115b-e67e-493b-9bd4-dd27e333b9eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="0" width="163" height="20" uuid="aa44f8e8-3920-4bba-8084-0bb0fae0c0dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="0" width="138" height="20" uuid="9b4d5feb-b746-464b-b64c-51ef8f5c991e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lokasi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="93" height="20" uuid="1009bee4-4073-422a-805b-d8a1aa478850"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="93" y="0" width="161" height="20" uuid="455a33c7-a8df-408d-b2da-8910640b5f67"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="392" y="0" width="163" height="20" uuid="2fc07dca-5a3b-4bc9-84ba-6a91a6371513"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="93" height="20" uuid="ecde741f-aab7-4857-a121-836990e6a0f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idObjekWisata}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="104" y="0" width="150" height="20" uuid="6b02cc32-c8c6-42b3-aa74-290eebcd3309"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{namaObjekWisata}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="0" width="163" height="20" uuid="6d3a8885-304e-4b96-8b09-967e62282d86"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jmlTransaksi}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="254" y="0" width="138" height="20" uuid="e235cf4d-981e-4c7f-ba7a-b9f6cd02ef71"/>
+			</rectangle>
+			<textField>
+				<reportElement x="265" y="0" width="127" height="20" uuid="9dc03d84-4754-400f-b6f7-b885d93aeb19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lokasi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="97" splitType="Stretch">
+			<staticText>
+				<reportElement x="344" y="17" width="211" height="19" uuid="57325602-fc84-4f6e-b0e9-3934301e24e7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Manajer,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="344" y="77" width="211" height="20" uuid="e1cd1cb1-7b0a-4897-901f-5c903d7c93b1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAMETER_NAMA_MANAJER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

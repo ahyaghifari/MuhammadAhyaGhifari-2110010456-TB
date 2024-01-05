@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="struk" language="groovy" pageWidth="566" pageHeight="396" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="526" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ceecd301-2cd4-4658-82be-cf470c6cf649">
+	<property name="ireport.zoom" value="1.500000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="50"/>
+	<parameter name="PARAMETER_QR_CODE" class="java.lang.String"/>
+	<field name="kodeTransaksi" class="java.lang.String"/>
+	<field name="namaObjekWisata" class="java.lang.String"/>
+	<field name="jumlahTiket" class="java.lang.String"/>
+	<field name="totalObjekWisata" class="java.lang.String"/>
+	<field name="hargaObjekWisata" class="java.lang.String"/>
+	<field name="totalBiaya" class="java.lang.String"/>
+	<field name="totalPromoDiskon" class="java.lang.String"/>
+	<field name="totalKeseluruhan" class="java.lang.String"/>
+	<field name="pelanggan" class="java.lang.String"/>
+	<field name="namaAdmin" class="java.lang.String"/>
+	<field name="tanggalWisata" class="java.lang.String"/>
+	<field name="pembayaran" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="122" height="42" uuid="876a7bba-d8e0-4911-b35e-112cac625b84"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WisataQ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="0" width="404" height="42" uuid="d71a5a1c-ed79-41b9-9016-60de34319a3c"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Karang Anyar 1 No. 25, Banjarbaru Utara, Banjarbaru,
+Kalimantan Selatan
+Telepon : 089541350536 Email : wisata@gmail.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="45" width="525" height="1" uuid="a1993c01-e7d8-49c2-a2b1-f6b1f8664b61"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="11" width="122" height="30" uuid="b4bed9b9-29f1-4059-b171-cef2515314c8"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transaksi]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="372" y="11" width="153" height="20" uuid="fa192616-abec-49c4-98db-6287f3bff1c0"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="41" width="122" height="20" uuid="089f7790-3c08-4b96-9f9e-44f1037b0948"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kodeTransaksi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="71" width="58" height="13" uuid="0cf3afcb-97bf-41be-8f64-cd979cc877c3"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pelanggan : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="71" width="207" height="20" uuid="f5006b2b-867c-4c45-a89c-22f35b69dae1"/>
+				<textFieldExpression><![CDATA[$F{pelanggan}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="16" y="91" width="510" height="1" uuid="ac30e153-13b3-4314-bb9c-bf9e9c00d468"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="372" y="31" width="153" height="20" uuid="44042e13-f382-4a4b-ad5a-333ebe907feb"/>
+				<textFieldExpression><![CDATA[$F{namaAdmin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="341" y="71" width="77" height="13" uuid="89e632d8-1e0e-424b-88ae-31c58e0c6cd6"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal Wisata :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="418" y="71" width="107" height="20" uuid="f59a2c60-9a88-4f1b-b874-22bd6c8bec07"/>
+				<textFieldExpression><![CDATA[$F{tanggalWisata}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="175" height="20" uuid="8284b4c1-1dac-4357-ae65-b9e05b84ead7"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Objek Wisata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="0" width="175" height="20" uuid="69702c99-720a-45ad-8e63-b868c51e8adb"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jml. Tiket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="175" height="20" uuid="a3d63320-0969-4d7a-9d24-f5acb62117b8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="15" y="0" width="160" height="20" uuid="17ea2549-7974-476f-bb94-a88d5488dbf7"/>
+				<textFieldExpression><![CDATA[$F{namaObjekWisata}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="175" y="0" width="175" height="20" uuid="10d23e62-0062-49b8-a66b-01371ef9d845"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{jumlahTiket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="175" height="20" uuid="6d2c0827-9c2f-4d58-a8af-a6798ec73b01"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{totalObjekWisata}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="11" width="58" height="20" uuid="88b3a523-742d-4c0c-af63-74de0d267d3f"/>
+				<text><![CDATA[Total Biaya : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="31" width="79" height="20" uuid="fa75b174-a176-467d-8b70-5987cdedea0f"/>
+				<text><![CDATA[Promo Diskon : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="11" width="100" height="20" uuid="804a093f-bf78-4135-a0f2-660f3ec48cac"/>
+				<textFieldExpression><![CDATA[$F{totalBiaya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="31" width="100" height="20" uuid="35a48053-19f9-4775-b7f3-6b777e8269de"/>
+				<textFieldExpression><![CDATA[$F{totalPromoDiskon}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="314" y="11" width="58" height="20" uuid="a36aaafa-2164-4cc1-a923-1348625e19cc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="363" y="11" width="162" height="20" uuid="df76e163-5039-4ce5-b546-c1e937e2fe19"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalKeseluruhan}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="15" y="0" width="510" height="1" uuid="706765bc-aa09-4141-a33d-164d8ff7d544"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="314" y="31" width="100" height="20" uuid="8d6a7b4d-8aa0-4db5-b42d-91bc62899d66"/>
+				<textFieldExpression><![CDATA[$F{pembayaran}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image isLazy="true">
+				<reportElement x="475" y="4" width="50" height="50" uuid="055b2153-4d6e-4e3c-a68e-e47e0c337647"/>
+				<imageExpression><![CDATA[new URL($P{PARAMETER_QR_CODE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="15" y="16" width="267" height="20" uuid="9821423a-4926-49ea-a094-74a1d48a3631"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Terima kasih sudah ikut berjalan-jalan dengan kami]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="36" width="267" height="18" uuid="4003e9bd-8d20-4e9f-9fbb-43f602473814"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[* simpan struk atau nota ini sebagai bukti pembayaran]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
